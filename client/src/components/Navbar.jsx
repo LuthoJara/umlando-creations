@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Container = styled.div`
   height: 60px;
@@ -71,13 +72,15 @@ const Navbar = () => {
         <MenuItem>SIGN IN</MenuItem>
         {/* //There is supposed to be a shopping cart icon from MUI below */}
 
-        <MenuItem>SHOPING CART</MenuItem> 
+        <MenuItem><ShoppingCartOutlinedIcon/></MenuItem> 
         <SearchContainer>
         {/* //The functionality for searching is below */}
         <Input/> 
         icon
         {/* //There is supposed to be an icon for searching from MUI */}
+        <SearchIcon/> 
         {/* <SearchOutlinedIcon/> */}
+
         </SearchContainer>
        </Right>
       </Wrapper>
