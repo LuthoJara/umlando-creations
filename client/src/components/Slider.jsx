@@ -51,15 +51,15 @@ const Slider = () => {
             <ArrowLeftOutlinedIcon/>
         </Arrow>
         <Wrapper>
+            <Slide>
             <ImgContainer>
-            {/* Get the relevant pictures for flexing */}
-            <Image src="./"/>
+            <Image src="../images/clothes4.jpg" alt="My Image" />
             </ImgContainer>
             <InfoContainer></InfoContainer>
+            </Slide>
         </Wrapper>
         <Arrow direction = "right">
             <ArrowRightOutlinedIcon/> 
-            {/* Arror for right */}
         </Arrow>
     </Container>
   )
