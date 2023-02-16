@@ -70,17 +70,13 @@ const Navbar = () => {
         //There is supposed to be a mail icon for registering and signing in from MUI below */}
         <MenuItem>REGISTER</MenuItem>
         <MenuItem>SIGN IN</MenuItem>
-        {/* //There is supposed to be a shopping cart icon from MUI below */}
-
-        <MenuItem><ShoppingCartOutlinedIcon/></MenuItem> 
+    
+        <MenuItem>
+        <ShoppingCartOutlinedIcon/>
+        </MenuItem> 
         <SearchContainer>
-        {/* //The functionality for searching is below */}
         <Input/> 
-        icon
-        {/* //There is supposed to be an icon for searching from MUI */}
         <SearchIcon/> 
-        {/* <SearchOutlinedIcon/> */}
-
         </SearchContainer>
        </Right>
       </Wrapper>
