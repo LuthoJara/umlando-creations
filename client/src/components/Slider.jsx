@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
+import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 
 const Container = styled.div`
     width: 100%;
@@ -9,7 +11,7 @@ const Container = styled.div`
 const Arrow = styled.div`
     width: 50px;
     height: 50px;
-    background-color: #db1010;
+    background-color: #ffefef;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -21,7 +23,7 @@ const Arrow = styled.div`
     right: ${props => props.direction === "right" && "10px"};
     margin: auto;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.5;
 `
 const Wrapper = styled.div`
     height: 100%;
@@ -46,15 +48,17 @@ const Slider = () => {
     <Container>
         <Arrow direction = "left">
             {/* Arror for left */}
+            <ArrowLeftOutlinedIcon/>
         </Arrow>
         <Wrapper>
             <ImgContainer>
             {/* Get the relevant pictures for flexing */}
-            <Image src=""/>
+            <Image src="./"/>
             </ImgContainer>
             <InfoContainer></InfoContainer>
         </Wrapper>
         <Arrow direction = "right">
+            <ArrowRightOutlinedIcon/> 
             {/* Arror for right */}
         </Arrow>
     </Container>

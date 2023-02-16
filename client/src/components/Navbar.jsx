@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from '@mui/material/Badge';
 
 const Container = styled.div`
   height: 60px;
@@ -23,7 +24,7 @@ const Left = styled.div`
 `
 const Logo = styled.h1`
   font-weight: bold;
-  font-size: 50px;
+  font-size: 36px;
   /* padding-right: 30px; */
 `
 const Centre = styled.div`
@@ -63,7 +64,7 @@ const Navbar = () => {
         <MenuItem>CONTACT US</MenuItem>
        </Left>
        <Centre>
-        <Logo>ALQO.</Logo>
+        <Logo>UMLANDO CREATIONS.</Logo>
        </Centre>
        <Right>
         {/* //The menu functionality is below
@@ -72,7 +73,10 @@ const Navbar = () => {
         <MenuItem>SIGN IN</MenuItem>
     
         <MenuItem>
+        <Badge badgeContent={4} color="primary">
         <ShoppingCartOutlinedIcon/>
+        {/* <MailIcon color="action" /> */}
+        </Badge>
         </MenuItem> 
         <SearchContainer>
         <Input/> 

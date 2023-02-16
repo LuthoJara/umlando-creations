@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const Announcements = () => {
   return (
-    <Container>Valentines day special! Get 10% off on facial products during 14-28 February</Container>
+    <Container>Valentines day special! Get 10% off on colorful products during 14-28 February</Container>
   )
 }
 
