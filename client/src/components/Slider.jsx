@@ -4,7 +4,7 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
 import { useState } from "react";
 
-import {sliderItems}  from "../data";
+import {sliderItems}  from "../data.js";
 
 const Container = styled.div`
     width: 100%;
@@ -16,7 +16,7 @@ const Container = styled.div`
 const Arrow = styled.div`
     width: 50px;
     height: 50px;
-    background-color: #f8f1f9;
+    background-color: #f2f2f2;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -34,6 +34,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transition: all 1.5s ease;
     transform: translateX(${props => props.slideIndex * -100}vw);
 `
 const Slide = styled.div`
@@ -46,7 +47,8 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
     flex: 1;
     height: 100%;
-    padding: 50px;
+    padding-top: 70px;
+    margin-left: 50px;
 `
 const Image = styled.img`
     height: 80%;
@@ -76,9 +78,9 @@ const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
     const handleClick = (direction) => {
         if (direction === "left"){
-            setSlideIndex(slideIndex > 0 ? slideIndex - 0 : 2);
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
         } else {
-            setSlideIndex(slideIndex < 0 ? slideIndex + 1 : 0);
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
         }
     };
 
@@ -88,8 +90,7 @@ const Slider = () => {
             <ArrowLeftOutlinedIcon/>
         </Arrow>
         <Wrapper slideIndex = {slideIndex}>
-           {sliderItems.map((item) => (
-               
+           {sliderItems.map((item) => ( 
             <Slide bg={item.bg}>
             <ImgContainer>
             <Image src = {item.img} />
@@ -100,7 +101,7 @@ const Slider = () => {
                 <Button>Shop Now</Button>
             </InfoContainer>
            </Slide>
-        ))}
+            ))}
         </Wrapper>
         <Arrow direction = "right" onClick={() => handleClick("right")}>
             <ArrowRightOutlinedIcon/> 
