@@ -54,5 +54,21 @@ export const popularItems = [
     {
         id: 3,
         img: ribbon3,
+    },
+    {
+        id: 4,
+        img: info1,
+    },
+    {
+        id: 6,
+        img: clothes1,
+    },
+    {
+        id: 7,
+        img: info1,
+    },
+    {
+        id: 8,
+        img: clothes1,
     }
 ]
