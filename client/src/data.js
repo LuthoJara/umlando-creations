@@ -42,3 +42,17 @@ export const categories = [
         title: "Ribbons",
     }
 ]
+export const popularItems = [
+    {
+        id: 1,
+        img: info1,
+    },
+    {
+        id: 2,
+        img: clothes1,
+    },
+    {
+        id: 3,
+        img: ribbon3,
+    }
+]
