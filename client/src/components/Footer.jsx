@@ -12,24 +12,6 @@ const Left = styled.div`
     flex-direction: column;
     padding: 20px;
 `
-const Centre = styled.div`
-    flex: 1;    
-    padding: 20px;
-`
-const Title = styled.h3`
-    margin-bottom: 30px;    
-`
-const List = styled.ul`
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-`
-const ListItem = styled.li`
-    width: 50%;
-    margin-bottom: 10px;
-`
 const Logo = styled.h1`
 
 `
@@ -49,6 +31,24 @@ const SocialIcons = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+`
+const Centre = styled.div`
+    flex: 1;    
+    padding: 20px;
+`
+const Title = styled.h3`
+    margin-bottom: 30px;    
+`
+const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+`
+const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
 `
 const Right = styled.div`
     flex: 1;    
@@ -98,7 +98,7 @@ const Footer = () => {
         </Centre>
         <Right>
             <Title>Contacts</Title>
-            <ContactItem><Room style={{marginRight: "10px"}} /> 36 Geldsoek Ave,Silver Lakes</ContactItem>
+            <ContactItem><Room style={{marginRight: "10px"}} /> 36 Geldsoek Ave, Silver Lakes</ContactItem>
             <ContactItem><Phone style={{marginRight: "10px"}}/> (+27) 25 895 4647</ContactItem>
             <ContactItem>
              <MailOutline style={{marginRight: "10px"}}/> Contact@Alqo.co.za
