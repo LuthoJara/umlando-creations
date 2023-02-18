@@ -1,6 +1,20 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@mui/icons-material"
 import styled from "styled-components"
 
+const Info = styled.div`
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    opacity: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+`
 const Container = styled.div`
     flex: 1;
     margin: 5px;
@@ -26,20 +40,6 @@ const Circle = styled.div`
 const Image = styled.img`
     height: 75%;
     z-index: 2;
-`
-const Info = styled.div`
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.2);
-    opacity: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
 `
 const Icon = styled.div`
     width: 40px;
