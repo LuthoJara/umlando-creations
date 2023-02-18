@@ -4,10 +4,11 @@ import styled from "styled-components"
 const Info = styled.div`
     width: 100%;
     height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.2);
     opacity: 0;
+    background-color: rgba(0,0,0,0.2);
     z-index: 3;
     display: flex;
     align-items: center;
@@ -23,7 +24,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #d6d2d2;
+    background-color: #f7f7f7;
     position: relative;
 
     &:hover ${Info}{
@@ -52,7 +53,7 @@ const Icon = styled.div`
     margin: 10px;
     transition: all 0.5s ease;
 
-    &hover:{
+    &:hover{
         background-color: #fbebeb;
         transform: scale(1.1);   
     }
