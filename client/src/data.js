@@ -1,11 +1,11 @@
-import info1 from "./images/info1.jpg"
+import sticker1 from "./images/sticker1.jpg"
 import clothes1 from "./images/clothes1.jpg"
 import ribbon3 from "./images/ribbon3.jpg"
 
 export const sliderItems = [
     {
         id: 1,
-        img: info1,
+        img: sticker1,
         title: "Classic",
         desc: "Don't hesitate, don't deliberate get your labels now!!",
         bg: "#65e17a", 
@@ -28,7 +28,7 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: info1,
+        img: sticker1,
         title: "Clothing labels",
     },
     {
@@ -45,7 +45,7 @@ export const categories = [
 export const popularItems = [
     {
         id: 1,
-        img: info1,
+        img: sticker1,
     },
     {
         id: 2,
@@ -57,7 +57,11 @@ export const popularItems = [
     },
     {
         id: 4,
-        img: info1,
+        img: sticker1,
+    },
+    {
+        id: 5,
+        img: ribbon3,
     },
     {
         id: 6,
@@ -65,10 +69,10 @@ export const popularItems = [
     },
     {
         id: 7,
-        img: info1,
+        img: sticker1,
     },
     {
         id: 8,
         img: clothes1,
-    }
+    },
 ]
