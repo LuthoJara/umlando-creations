@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   padding: 20px;
-  width: 40%;
+  width: 25%;
   background-color: #fff;
 `
 const Title = styled.h1`
@@ -32,7 +32,7 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  margin: 20px 10px 0px 0px;
+  margin: 10px 0px;
   padding: 10px; 
 `
 
@@ -43,9 +43,13 @@ const Button = styled.button`
   background-color: #0b8b7e;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 10px;
 `
 const Link = styled.a`
-  
+  margin: 10px 0px;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
 `
 
 const Login = () => {
