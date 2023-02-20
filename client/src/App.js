@@ -1,27 +1,30 @@
+//Impoorting React Routes
+import {Route, Routes} from 'react-router-dom'
+
+//Importing pages
+import AboutUs from "./pages/AboutUs";
+import Cart from "./pages/Cart";
+import ContactUs from "./pages/ContactUs";
 import Home from "./pages/Home";
-import ProductList from "./pages/ProductList";
+import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Cart from "./pages/Cart";
-
+// import ProductList from "./pages/ProductList";
 
 
 function App() {
   return (
     <div className="App">
-         <Home />
-
       <Routes>
-       <Route path='/' component={<Home/>} />
-       <Route path='/Product' component={<Product/>} />
-       <Route path='/Register' component={<Register/>} />
-       <Route path='/Login' component={<Login/>} />
-       <Route path='/Cart' component={<Cart/>} />
-       <Route path='/Home' component={<Home/>} />
-
+       <Route path='/' element={<Home/>} />
+       <Route path='/AboutUs' element={<AboutUs/>} />
+       <Route path='/Cart' element={<Cart/>} />
+       <Route path='/ContactUs' element={<ContactUs/>} />
+       <Route path='/Login' element={<Login/>} />
+       <Route path='/Product' element={<Product/>} />
+       <Route path='/Register' element={<Register/>} />
       </Routes>
-       </div>
+    </div>
   );
 }
 
