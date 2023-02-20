@@ -8,16 +8,19 @@ import Products from '../components/Products'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 
+import {Route, Routes, Link} from 'react-router-dom'
+
+
 const Home = () => {
   return (
     <>
-    <Announcements/>
-    <Navbar/>
-    <Slider/>
-    <Categories/>
-    <Products/> 
-    <Newsletter/>
-    <Footer/>
+     <Announcements/>
+     <Navbar/>
+     <Slider/>
+     <Categories/>
+     <Products/> 
+     <Newsletter/>
+     <Footer/>
     </>
   )
 }

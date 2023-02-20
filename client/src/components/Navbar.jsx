@@ -5,6 +5,16 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from '@mui/material/Badge';
 
+// import Product from '../pages/Product'
+// import AboutUs from '../pages/AboutUs'
+// import ContactUs from '../pages/ContactUs'
+// import Home from '../pages/Home'
+// import Login from '../pages/Login'
+// import Register from '../pages/Register'
+// import Cart from '../pages/Cart'
+
+import {Link} from 'react-router-dom'
+
 const Container = styled.div`
   height: 60px;
   background-color: #ffffff;
@@ -25,25 +35,22 @@ const Left = styled.div`
 const Logo = styled.h1`
   font-weight: bold;
   font-size: 36px;
-  /* padding-right: 30px; */
 `
 const Centre = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  `
-
+`
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  `
+`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
-  /* margin-right: 25px; */
 `
 const SearchContainer = styled.div`
   border: 1px solid lightgray;
@@ -56,26 +63,53 @@ const Input = styled.input`
 
 const Navbar = () => {
   return (
-    <Container>
+
+  <Container>
       <Wrapper>
-       <Left>        
-        <MenuItem>PRODUCTS</MenuItem>
-        <MenuItem>ABOUT US</MenuItem>
-        <MenuItem>CONTACT US</MenuItem>
+       <Left> 
+        <Route path />       
+        <MenuItem>
+        <Link to="/Product">
+        PRODUCTS
+        </Link>
+        </MenuItem>
+        <MenuItem>
+        <Link to="/AboutUs">
+        ABOUT US
+        </Link>
+        </MenuItem>
+        <MenuItem>
+        <Link to="/ContactUs">
+        CONTACT US
+        </Link>
+        </MenuItem>
        </Left>
        <Centre>
-        <Logo>UMLANDO CREATIONS.</Logo>
+        <Logo>
+        <Link to="/">
+        UMLANDO CREATIONS.
+        </Link>
+        </Logo>
        </Centre>
        <Right>
         {/* //The menu functionality is below
         //There is supposed to be a mail icon for registering and signing in from MUI below */}
-        <MenuItem>REGISTER</MenuItem>
-        <MenuItem>SIGN IN</MenuItem>
+        <MenuItem>
+        <Link to="/Register">
+        REGISTER
+        </Link>
+        </MenuItem>
+        <MenuItem>
+        <Link to="/Login">
+        LOGIN
+        </Link>
+        </MenuItem>
     
         <MenuItem>
         <Badge badgeContent={4} color="primary">
+        <Link to="/Cart">
         <ShoppingCartOutlinedIcon/>
-        {/* <MailIcon color="action" /> */}
+        </Link>
         </Badge>
         </MenuItem> 
         <SearchContainer>
@@ -85,6 +119,7 @@ const Navbar = () => {
        </Right>
       </Wrapper>
     </Container>
+
   )
 }
 
