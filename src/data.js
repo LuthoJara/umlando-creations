@@ -1,5 +1,5 @@
 import sticker4 from "./images/sticker4.jpg"
-import clothes1 from "./images/clothes1.jpg"
+import jersey2 from "./images/jersey2.jpg"
 import ribbon3 from "./images/ribbon3.jpg"
 
 // Defining the fonts
@@ -17,7 +17,7 @@ export const sliderItems = [
     },
     {
         id: 2,
-        img: clothes1,
+        img: jersey2,
         title: "Popular",
         desc: "Don't hesitate, don't deliberate get your labels now!!",
         bg: "#8cdf58", 
@@ -38,7 +38,7 @@ export const categories = [
     },
     {
         id: 2,
-        img: clothes1,
+        img: jersey2,
         title: "Stationery labels", 
     },
     {
@@ -54,7 +54,7 @@ export const popularItems = [
     },
     {
         id: 2,
-        img: clothes1,
+        img: jersey2,
     },
     {
         id: 3,
@@ -70,7 +70,7 @@ export const popularItems = [
     },
     {
         id: 6,
-        img: clothes1,
+        img: jersey2,
     },
     {
         id: 7,
@@ -78,7 +78,7 @@ export const popularItems = [
     },
     {
         id: 8,
-        img: clothes1,
+        img: jersey2,
     },
 ]
 // export const tempCategories = [
