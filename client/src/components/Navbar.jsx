@@ -65,6 +65,11 @@ const Navbar = () => {
         </Link>
         </MenuItem>
         <MenuItem>
+        <Link to='/ProductList'>
+        PRODUCT LIST
+        </Link>
+        </MenuItem>
+        <MenuItem>
         <Link to='/AboutUs'>
         ABOUT US
         </Link>

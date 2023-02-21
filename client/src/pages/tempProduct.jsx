@@ -1,11 +1,12 @@
 import styled from "styled-components"
+
 import Navbar from "../components/Navbar"
 import Announcements from "../components/Announcements"
 import Newsletter from "../components/Newsletter"
 import Footer from "../components/Footer"
 
 import keychain1 from "../images/keychain1.jpg"
-import { Add, Remove } from "@mui/icons-material"
+import {tempCategories}  from "../data.js";
 
 
 const Container = styled.div`
@@ -103,32 +104,30 @@ const Product = () => {
     <Container>
      <Announcements/>
      <Navbar/>
+        {tempCategories.map((item) => (
      <Wrapper>
         <ImgContainer>
-         <Image src={keychain1} />
+            <Image src={item.img} />
         </ImgContainer>
         <InfoContainer>
-            <Title>Keychain</Title>
-            <Description>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non nulla eaque et odio reiciendis ipsum perspiciatis ipsa consectetur dolorum qui iste, cupiditate laborum aspernatur expedita assumenda omnis perferendis praesentium quae sapiente, molestias odit! Nostrum odit cupiditate culpa, enim eos libero voluptatem, velit provident ipsa distinctio dolorum dolor quisquam ut!
-            </Description>
-            <Price>R50</Price>
+            <Title>{item.title}</Title>
+            <Description> {item.description}</Description>
+            <Price>{item.price}</Price>
          <FilterContainer>
-
-          <Filter>
+         <Filter>
+             <FilterTitle>Font:</FilterTitle>
+             <FilterColor font = {item.font}>{item.font.indexOf} </FilterColor>
+          </Filter> 
+          {/* <Filter>
              <FilterTitle>Color:</FilterTitle>
              <FilterColor color="#000"> </FilterColor>
              <FilterColor color="#0a1758"> </FilterColor>
              <FilterColor color="#5e5b5b"> </FilterColor>
-          </Filter>   
+          </Filter>    */}
           <Filter>
              <FilterTitle>Quantity:</FilterTitle>
              <FilterQuantity>
-             <FilterQuantityOption>5</FilterQuantityOption>
-             <FilterQuantityOption>10</FilterQuantityOption>
-             <FilterQuantityOption>20</FilterQuantityOption>
-             <FilterQuantityOption>50</FilterQuantityOption>
-            
+             <FilterQuantityOption>{item.quantity}</FilterQuantityOption>            
              </FilterQuantity>
           </Filter>
          </FilterContainer>    
@@ -142,6 +141,7 @@ const Product = () => {
          </AddContainer>
         </InfoContainer>
      </Wrapper>
+      ))}
      <Newsletter/>
      <Footer/>
     </Container>
