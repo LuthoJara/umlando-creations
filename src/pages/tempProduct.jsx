@@ -135,7 +135,7 @@ const Product = () => {
             <AmountContainer>
                 <Remove/>
                 <Amount>1</Amount>
-                <Add/>
+                <Add />
                 <Button>ADD TO CART</Button>
             </AmountContainer>
          </AddContainer>

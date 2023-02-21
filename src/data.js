@@ -1,11 +1,16 @@
-import sticker1 from "./images/sticker1.jpg"
+import sticker4 from "./images/sticker4.jpg"
 import clothes1 from "./images/clothes1.jpg"
 import ribbon3 from "./images/ribbon3.jpg"
+
+// Defining the fonts
+// const font1 = 
+// const font2 = 
+
 
 export const sliderItems = [
     {
         id: 1,
-        img: sticker1,
+        img: sticker4,
         title: "Classic",
         desc: "Don't hesitate, don't deliberate get your labels now!!",
         bg: "#65e17a", 
@@ -28,7 +33,7 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: sticker1,
+        img: sticker4,
         title: "Clothing labels",
     },
     {
@@ -45,7 +50,7 @@ export const categories = [
 export const popularItems = [
     {
         id: 1,
-        img: sticker1,
+        img: sticker4,
     },
     {
         id: 2,
@@ -57,7 +62,7 @@ export const popularItems = [
     },
     {
         id: 4,
-        img: sticker1,
+        img: sticker4,
     },
     {
         id: 5,
@@ -69,7 +74,7 @@ export const popularItems = [
     },
     {
         id: 7,
-        img: sticker1,
+        img: sticker4,
     },
     {
         id: 8,
@@ -79,7 +84,7 @@ export const popularItems = [
 // export const tempCategories = [
 //     {
 //         id: 1,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Iron on labels",
 //         quantity: [50, 100, 150, 200],
 //         price: [80, 140, 185, 235],
@@ -87,7 +92,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 2,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Sew on labels",
 //         quantity: [50, 100],
 //         price: [160, 210],
@@ -95,7 +100,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 3,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Shoe labels",
 //         quantity: [10, 20],
 //         price: [30, 45],
@@ -103,7 +108,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 4,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Bag tags",
 //         quantity: [1, 2],
 //         price: [20, 30],
@@ -111,7 +116,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 5,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Wrap around",
 //         quantity: [50, 100],
 //         price: [55, 85],
@@ -119,7 +124,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 6,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Stationery labels",
 //         Size: [30, 10],
 //         quantity: [50, 100, 150],
@@ -128,7 +133,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 7,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Stationery labels",
 //         Size: [45, 15],
 //         quantity: [50, 100, 150],
@@ -137,7 +142,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 8,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Book labels",
 //         quantity: [50, 100, 150, 200],
 //         price: [35, 50, 70, 90],
@@ -145,7 +150,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 9,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Combo",
 //         items:["Stationery", "Clothing"],
 //         price: [180, 220],
@@ -154,7 +159,7 @@ export const popularItems = [
 //     },
 //     {
 //         id: 10,
-//         img: sticker1,
+//         img: sticker4,
 //         title: "Ribbons",
 //         quantity: [10, 20, 30],
 //         price: [30, 55, 75],
