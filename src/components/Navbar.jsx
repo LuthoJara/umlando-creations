@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Iporting icons from MUI
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from '@mui/material/Badge';
 
+///Routes for the react app
 import {Link} from 'react-router-dom'
+
+//Importing responsive design elements
+import {mobile} from '../responsive' 
 
 const Container = styled.div`
   height: 60px;
   background-color: #ffffff;
   padding-bottom: 5px;
+  ${mobile({ 
+   backgroundColor: "red"
+})}
+  
 `
 const Wrapper = styled.div`
   padding: 5px 20px;
@@ -40,9 +49,23 @@ const Right = styled.div`
   align-items: center;
   justify-content: space-around;
 `
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
+  text-decoration: none;
+  color: black;
+  background-color: white;
   font-size: 14px;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+  }
+
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
 `
 const SearchContainer = styled.div`
   border: 1px solid lightgray;
@@ -59,51 +82,37 @@ const Navbar = () => {
   <Container>
       <Wrapper>
        <Left>       
-        <MenuItem>
-        <Link to='/Product'>
+        <MenuItem to='/Product'>
         PRODUCTS
-        </Link>
+        </MenuItem> 
+        <MenuItem to='/ProductList'>
+        PRODUCT LIST 
+        </MenuItem> 
+        <MenuItem to='/AboutUs'>
+        ABOUT US 
         </MenuItem>
-        <MenuItem>
-        <Link to='/ProductList'>
-        PRODUCT LIST
-        </Link>
-        </MenuItem>
-        <MenuItem>
-        <Link to='/AboutUs'>
-        ABOUT US
-        </Link>
-        </MenuItem>
-        <Link to='/ContactUs'>
-        <MenuItem>
+        <MenuItem to='/ContactUs'> 
         CONTACT US
-        </MenuItem>
-        </Link>
+        </MenuItem> 
        </Left>
        <Centre>
+        <MenuItem to='/'>
         <Logo>
-        <Link to='/'>
-        UMLANDO CREATIONS.
-        </Link>
+        UMLANDO CREATIONS. 
         </Logo>
+        </MenuItem> 
        </Centre>
-       <Right>
-        <MenuItem>
-        <Link to='/Register'>
-        REGISTER
-        </Link>
+       <Right> 
+        <MenuItem to='/Register'>
+        REGISTER 
+        </MenuItem> 
+        <MenuItem to='/Login'>
+        LOGIN 
         </MenuItem>
-        <MenuItem>
-        <Link to='/Login'>
-        LOGIN
-        </Link>
-        </MenuItem>
-    
-        <MenuItem>
+     
+        <MenuItem to='/Cart'>
         <Badge badgeContent={4} color="primary">
-        <Link to='/Cart'>
-        <ShoppingCartOutlinedIcon/>
-        </Link>
+        <ShoppingCartOutlinedIcon/> 
         </Badge>
         </MenuItem> 
         <SearchContainer>
