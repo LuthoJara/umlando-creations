@@ -66,7 +66,7 @@ const Footer = () => {
   return (
     <Container>
         <Left>
-            <Logo>ALQO.</Logo>
+            <Logo>UMLANDO</Logo>
             <Description>The best place to get all your labels. </Description>
             <SocialContainer>
              <SocialIcons color="#224b9c">
@@ -88,9 +88,7 @@ const Footer = () => {
             <List>
                 <ListItem>Home</ListItem>
                 <ListItem>Cart</ListItem>
-                <ListItem>Stickers</ListItem>
-                <ListItem>Ribbons</ListItem>
-                <ListItem>Iron-On</ListItem>
+                <ListItem>All products</ListItem>
                 <ListItem>My Account</ListItem>
                 <ListItem>Wishlist</ListItem>
                 <ListItem>T&C</ListItem>

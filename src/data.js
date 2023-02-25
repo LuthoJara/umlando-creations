@@ -7,82 +7,7 @@
  import combo2 from "./images/combo2.jpg"
  import ribbon1 from "./images/ribbon1.jpg" 
 
-export const sliderItems = [
-    {
-        id: 1,
-        img: tie1,
-        title: "Iron on labels",
-        bg: "#65e17a", 
-    },
-    {
-        id: 2,
-        img: tie1,
-        title: "Sew on labels",
-        bg: "#8cdf58", 
-    },
-    {
-        id: 3,
-        img: shoe1,
-        title: "Shoe labels",
-        bg: "#ca72da", 
-    },
-    {
-        id: 4,
-        img: keychain1,
-        title: "Keychain",
-        bg: "#65e17a", 
-    },
-    {
-        id: 5,
-        img: pensnstickers2,
-        title: "Wrap around labels",
-        bg: "#8cdf58", 
-    },
-    {
-        id: 6,
-        img: stickerlabel1,
-        title: "Sticker labels",
-        bg: "#ca72da", 
-    },
-    {
-        id: 7,
-        img: booklabel,
-        title: "Book labels",
-        bg: "#65e17a", 
-    },
-    {
-        id: 8,
-        img: combo2,
-        title: "Get combo deals",
-        bg: "#8cdf58", 
-    },
-    {
-        id: 9,
-        img: ribbon1,
-        title: "Shop ribbons",
-        bg: "#ca72da", 
-    }
-]
-
-export const popularItems = [
-    {
-        id: 1,
-        img: tie1,
-        title: "Iron on labels",
-    },
-    {
-        id: 2,
-        img: pensnstickers2,
-        title: "Wrap around labels", 
-    },
-    {
-        id: 3,
-        img: ribbon1,
-        title: "Ribbons",
-    }
-]
-
-export const ourProducts = [
+export const allProducts = [
     {
         id: 1,
         img: tie1,
@@ -90,6 +15,7 @@ export const ourProducts = [
         quantity: [50, 100, 150, 200],
         price: [80, 140, 185, 235],
         // font: [font1, font2],
+        bg: "#65e17a", 
     },
     {
         id: 2,
@@ -98,6 +24,7 @@ export const ourProducts = [
         quantity: [50, 100],
         price: [160, 210],
         // font: [font1, font2],
+        bg: "#8cdf58", 
     },
     {
         id: 3,
@@ -106,6 +33,7 @@ export const ourProducts = [
         quantity: [10, 20],
         price: [30, 45],
         // font: [font1, font2],
+        bg: "#ca72da", 
     },
     {
         id: 4,
@@ -114,6 +42,7 @@ export const ourProducts = [
         quantity: [1, 2],
         price: [20, 30],
         // font: [font1, font2],
+        bg: "#65e17a", 
     },
     {
         id: 5,
@@ -122,6 +51,7 @@ export const ourProducts = [
         quantity: [50, 100],
         price: [55, 85],
         // font: [font1, font2],
+        bg: "#8cdf58", 
     },
     {
         id: 6,
@@ -131,6 +61,7 @@ export const ourProducts = [
         quantity: [50, 100, 150],
         price: [[35, 50, 70],[40, 60, 80]],
         // font: [font1, font2],
+        bg: "#ca72da", 
     },
    
     {
@@ -140,6 +71,7 @@ export const ourProducts = [
         quantity: [50, 100, 150, 200],
         price: [35, 50, 70, 90],
         // font: [font1, font2],
+        bg: "#65e17a", 
     },
     {
         id: 8,
@@ -148,7 +80,8 @@ export const ourProducts = [
         items:["Stationery", "Clothing"],
         price: [180, 220],
         // font: [font1, font2],
-        description:[]
+        description:[],
+        bg: "#8cdf58", 
     },
     {
         id: 9,
@@ -157,6 +90,7 @@ export const ourProducts = [
         quantity: [10, 20, 30],
         price: [30, 55, 75],
         // font: [font1, font2],
+        bg: "#ca72da", 
     },
 ]
 

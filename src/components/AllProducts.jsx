@@ -1,25 +1,32 @@
 import styled from "styled-components"
-import { ourProducts } from "../data"
+import { allProducts } from "../data"
 import ProductItem from "./ProductItem"
 
 const Container = styled.div`
+  height: auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 20px;
-  width: 80%;
-  /* justify-content: space-between; */
-`
-const Title = styled.h1`
-  height: 0.1rem;
-  width: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: underline;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
 `
 const Wrapper = styled.div`
   display: flex;
+`
+const ProductWrapper = styled.div`
+  height: auto;
+  width: 100vw ;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+` 
+const Title = styled.h1`
+  font-size: 60px;
+`
+const ProductContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   flex-direction: row;
   flex-wrap: wrap;
   flex: 1 1 0; /* reset flex property to 0 to allow for manual width assignment */
@@ -32,13 +39,16 @@ const Wrapper = styled.div`
 const AllProducts = () => {
   return (
     <Container>
-      <Title>OUR PRODUCTS </Title>
       <Wrapper>
-        {ourProducts.map (item => (
-        <ProductItem item = {item} key ={item.id}/>
-        ))}
+        <ProductWrapper>
+          <Title>OUR PRODUCTS </Title>
+          <ProductContainer>
+           {allProducts.map (item => (
+           <ProductItem item = {item} key ={item.id}/>
+           ))}
+          </ProductContainer>
+        </ProductWrapper>
       </Wrapper>
-    
     </Container>
   )
 }

@@ -14,6 +14,7 @@ import {Link} from 'react-router-dom'
 
 //Importing the logo
 import UCLogo from '../images/UC-logo.png'
+import { FavoriteBorderOutlined } from '@mui/icons-material';
 
 // const Container = styled.div`
 //   height: 10vh;
@@ -113,9 +114,12 @@ const Container = styled.div`
   height: auto;
   background-color: #000000;
   padding-bottom: 5px;
-`
+  /* position: absolute; */
+  `
 
 const Wrapper = styled.div`
+  /* position: fixed; */
+  /* z-index: 2; */
   padding: 5px 20px;
   display: flex;
   justify-content: space-between;
@@ -231,6 +235,10 @@ const Navbar = () => {
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlinedIcon />
             </Badge>
+          </MenuItem>
+          <MenuItem to='/Wishlist'>
+            <FavoriteBorderOutlined />
+            {/* <FavoriteBorder /> */}
           </MenuItem>
           <MenuItem>
             <SearchContainer>
