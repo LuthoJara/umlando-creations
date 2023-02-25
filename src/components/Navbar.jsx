@@ -39,7 +39,8 @@ const Wrapper = styled.div`
 `
 
 const MenuItem = styled(Link)`
-  height: 4rem;
+  height: 8rem;
+  font-size: 1.3em;
   width: auto;
   display: flex;
   align-items: center;
@@ -72,7 +73,6 @@ const Logo = styled.img`
    
   /* Media query for screens smaller than 768px */
    @media screen and (max-width: 768px) {
-    height: auto;
     width: 7vw;
   }
 `
@@ -83,14 +83,6 @@ const Right = styled.div`
   align-items: center;
   text-align: center;
   justify-content: space-around;
-
-  /* Media query for screens smaller than 768px */
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    width: 100%;
-    padding-top: 10px;
-    border-top: 1px solid #ffffff;
-  }
 `
 
 const SearchContainer = styled.div`
@@ -122,9 +114,9 @@ const Navbar = () => {
           </MenuItem>
         </Left>
         <Right>
-          <MenuItem to='/Product'>
+          {/* <MenuItem to='/Product'>
             OUR PRODUCTS
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem to='/AboutUs'>
             ABOUT US
           </MenuItem>
