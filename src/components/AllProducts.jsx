@@ -2,14 +2,14 @@ import styled from "styled-components"
 import { allProducts } from "../data"
 import ProductItem from "./ProductItem"
 
-const Container = styled.div`
+const Container = styled.div` 
   height: auto;
   width: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
   padding-top: 20px;
-`
+` 
 const Wrapper = styled.div`
   display: flex;
 `
