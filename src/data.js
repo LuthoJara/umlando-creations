@@ -1,174 +1,170 @@
-import sticker4 from "./images/sticker4.jpg"
-import jersey2 from "./images/jersey2.jpg"
-import ribbon3 from "./images/ribbon3.jpg"
-
-// Defining the fonts
-// const font1 = 
-// const font2 = 
-
+ import tie1 from "./images/tie1.jpg"
+ import shoe1 from "./images/shoe1.jpg"
+ import keychain1 from "./images/keychain1.jpg"
+ import pensnstickers2 from "./images/pensnstickers2.jpg"
+ import stickerlabel1 from "./images/stickerlabel1.jpg"
+ import booklabel from "./images/booklabel.jpg"
+ import combo2 from "./images/combo2.jpg"
+ import ribbon1 from "./images/ribbon1.jpg" 
 
 export const sliderItems = [
     {
         id: 1,
-        img: sticker4,
-        title: "Classic",
-        desc: "Don't hesitate, don't deliberate get your labels now!!",
+        img: tie1,
+        title: "Iron on labels",
         bg: "#65e17a", 
     },
     {
         id: 2,
-        img: jersey2,
-        title: "Popular",
-        desc: "Don't hesitate, don't deliberate get your labels now!!",
+        img: tie1,
+        title: "Sew on labels",
         bg: "#8cdf58", 
     },
     {
         id: 3,
-        img: ribbon3,
-        title: "Special Deal",
-        desc: "Don't hesitate, don't deliberate get your labels now!!",
+        img: shoe1,
+        title: "Shoe labels",
         bg: "#ca72da", 
-    }
-]
-export const categories = [
-    {
-        id: 1,
-        img: sticker4,
-        title: "Clothing labels",
-    },
-    {
-        id: 2,
-        img: jersey2,
-        title: "Stationery labels", 
-    },
-    {
-        id: 3,
-        img: ribbon3,
-        title: "Ribbons",
-    }
-]
-export const popularItems = [
-    {
-        id: 1,
-        img: sticker4,
-    },
-    {
-        id: 2,
-        img: jersey2,
-    },
-    {
-        id: 3,
-        img: ribbon3,
     },
     {
         id: 4,
-        img: sticker4,
+        img: keychain1,
+        title: "Keychain",
+        bg: "#65e17a", 
     },
     {
         id: 5,
-        img: ribbon3,
+        img: pensnstickers2,
+        title: "Wrap around labels",
+        bg: "#8cdf58", 
     },
     {
         id: 6,
-        img: jersey2,
+        img: stickerlabel1,
+        title: "Sticker labels",
+        bg: "#ca72da", 
     },
     {
         id: 7,
-        img: sticker4,
+        img: booklabel,
+        title: "Book labels",
+        bg: "#65e17a", 
     },
     {
         id: 8,
-        img: jersey2,
+        img: combo2,
+        title: "Get combo deals",
+        bg: "#8cdf58", 
     },
+    {
+        id: 9,
+        img: ribbon1,
+        title: "Shop ribbons",
+        bg: "#ca72da", 
+    }
 ]
-// export const tempCategories = [
-//     {
-//         id: 1,
-//         img: sticker4,
-//         title: "Iron on labels",
-//         quantity: [50, 100, 150, 200],
-//         price: [80, 140, 185, 235],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 2,
-//         img: sticker4,
-//         title: "Sew on labels",
-//         quantity: [50, 100],
-//         price: [160, 210],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 3,
-//         img: sticker4,
-//         title: "Shoe labels",
-//         quantity: [10, 20],
-//         price: [30, 45],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 4,
-//         img: sticker4,
-//         title: "Bag tags",
-//         quantity: [1, 2],
-//         price: [20, 30],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 5,
-//         img: sticker4,
-//         title: "Wrap around",
-//         quantity: [50, 100],
-//         price: [55, 85],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 6,
-//         img: sticker4,
-//         title: "Stationery labels",
-//         Size: [30, 10],
-//         quantity: [50, 100, 150],
-//         price: [35, 50, 70],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 7,
-//         img: sticker4,
-//         title: "Stationery labels",
-//         Size: [45, 15],
-//         quantity: [50, 100, 150],
-//         price: [40, 60, 80],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 8,
-//         img: sticker4,
-//         title: "Book labels",
-//         quantity: [50, 100, 150, 200],
-//         price: [35, 50, 70, 90],
-//         font: [font1, font2],
-//     },
-//     {
-//         id: 9,
-//         img: sticker4,
-//         title: "Combo",
-//         items:["Stationery", "Clothing"],
-//         price: [180, 220],
-//         font: [font1, font2],
-//         description:[]
-//     },
-//     {
-//         id: 10,
-//         img: sticker4,
-//         title: "Ribbons",
-//         quantity: [10, 20, 30],
-//         price: [30, 55, 75],
-//         font: [font1, font2],
-//     },
-// ]
-export const userChoice =[
+
+export const popularItems = [
     {
         id: 1,
-        choices: []
+        img: tie1,
+        title: "Iron on labels",
+    },
+    {
+        id: 2,
+        img: pensnstickers2,
+        title: "Wrap around labels", 
+    },
+    {
+        id: 3,
+        img: ribbon1,
+        title: "Ribbons",
+    }
+]
+
+export const ourProducts = [
+    {
+        id: 1,
+        img: tie1,
+        title: "Iron on labels",
+        quantity: [50, 100, 150, 200],
+        price: [80, 140, 185, 235],
+        // font: [font1, font2],
+    },
+    {
+        id: 2,
+        img: tie1,
+        title: "Sew on labels",
+        quantity: [50, 100],
+        price: [160, 210],
+        // font: [font1, font2],
+    },
+    {
+        id: 3,
+        img: shoe1,
+        title: "Shoe labels",
+        quantity: [10, 20],
+        price: [30, 45],
+        // font: [font1, font2],
+    },
+    {
+        id: 4,
+        img: keychain1,
+        title: "Keychain",
+        quantity: [1, 2],
+        price: [20, 30],
+        // font: [font1, font2],
+    },
+    {
+        id: 5,
+        img: pensnstickers2,
+        title: "Wrap around labels",
+        quantity: [50, 100],
+        price: [55, 85],
+        // font: [font1, font2],
+    },
+    {
+        id: 6,
+        img: stickerlabel1,
+        title: "Sticker labels",
+        Size: [[30, 10],[45, 15]],
+        quantity: [50, 100, 150],
+        price: [[35, 50, 70],[40, 60, 80]],
+        // font: [font1, font2],
+    },
+   
+    {
+        id: 7,
+        img: booklabel,
+        title: "Book labels",
+        quantity: [50, 100, 150, 200],
+        price: [35, 50, 70, 90],
+        // font: [font1, font2],
+    },
+    {
+        id: 8,
+        img: combo2,
+        title: "Combo labels",
+        items:["Stationery", "Clothing"],
+        price: [180, 220],
+        // font: [font1, font2],
+        description:[]
+    },
+    {
+        id: 9,
+        img: ribbon1,
+        title: "Ribbons",
+        quantity: [10, 20, 30],
+        price: [30, 55, 75],
+        // font: [font1, font2],
+    },
+]
+
+export const userChoice = [
+    {
+        id: 1,
+        cartItems: [],
+        cartNumber: 0,
+        wishlist: []
     }
 ]

@@ -7,8 +7,8 @@ import { useState } from "react";
 import {sliderItems}  from "../data.js";
 
 const Container = styled.div`
+    height: auto;
     width: 100%;
-    height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -32,40 +32,53 @@ const Arrow = styled.div`
     z-index: 2;
 `
 const Wrapper = styled.div`
-    height: 100%;
+    /* height: 100%;
+    width: 100%; */
     display: flex;
     transition: all 1.5s ease;
     transform: translateX(${props => props.slideIndex * -100}vw);
+    background-image: ${props=> props.backgroundImg};
 `
 const Slide = styled.div`
     display: flex;
+    flex-direction: column;
+
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    height: auto;
+    width: 100vw ;
     background-color: ${props=> props.bg};
+
+   /* Media query for screens smaller than 768px */
+   @media screen and (max-width: 768px) {
+   display: flex;
+   flex-direction: column;
+   /* height: auto; */
+  }
 `
 const ImgContainer = styled.div`
     flex: 1;
-    height: 100%;
-    padding-top: 70px;
-    margin-left: 50px;
+    height: 50%;
+    padding-bottom: 10px;
+    /* margin-left: 20px; */
 `
 const Image = styled.img`
-    height: 80%;
+    height: auto;
+    width: 25vw;
 `
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 50px;
+    height: 50%;
+    /* padding: 50px; */
 `
 const Title = styled.h1`
     font-size: 60px;
 `
-const Description = styled.p`
-    margin: 40px 0px;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 2px;
-`
+// const Description = styled.p`
+//     margin: 40px 0px;
+//     font-size: 20px;
+//     font-weight: 500;
+//     letter-spacing: 2px;
+// `
 const Button = styled.button`
     padding: 10px;
     font-size: 20px;
@@ -78,9 +91,9 @@ const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
     const handleClick = (direction) => {
         if (direction === "left"){
-            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 8);
         } else {
-            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+            setSlideIndex(slideIndex < 8 ? slideIndex + 1 : 0);
         }
     };
 
@@ -89,20 +102,19 @@ const Slider = () => {
         <Arrow direction = "left" onClick={() => handleClick("left")}>
             <ArrowLeftOutlinedIcon/>
         </Arrow>
-        <Wrapper slideIndex = {slideIndex}>
            {sliderItems.map((item) => ( 
+        <Wrapper key ={item.id} slideIndex = {slideIndex} backgroundImg = {item.img}>
             <Slide bg={item.bg} key ={item.id}>
-            <ImgContainer>
-            <Image src = {item.img} />
-            </ImgContainer>
-            <InfoContainer>
-                <Title>{item.title} </Title>
-                <Description>{item.desc} </Description>
-                <Button>Shop Now</Button>
-            </InfoContainer>
-           </Slide>
-            ))}
+               <Title>{item.title} </Title>
+             <ImgContainer>
+               <Image src = {item.img} />
+             </ImgContainer>
+             <InfoContainer>
+             </InfoContainer>
+               <Button>Shop Now</Button>
+            </Slide>
         </Wrapper>
+            ))}
         <Arrow direction = "right" onClick={() => handleClick("right")}>
             <ArrowRightOutlinedIcon/> 
         </Arrow>
