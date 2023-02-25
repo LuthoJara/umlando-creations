@@ -2,13 +2,16 @@ import styled from "styled-components";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
-import { useState } from "react";
+// import { useState } from "react";
 
-import {sliderItems}  from "../data.js";
+// trying to make automatic and ridding the loopback: useeffect
+import { useState, useEffect } from "react";
+
+import { allProducts }  from "../data.js";
 
 const Container = styled.div`
+    height: auto;
     width: 100%;
-    height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -32,39 +35,34 @@ const Arrow = styled.div`
     z-index: 2;
 `
 const Wrapper = styled.div`
-    height: 100%;
     display: flex;
-    transition: all 1.5s ease;
-    transform: translateX(${props => props.slideIndex * -100}vw);
+    /* transition: all 1.5s ease; */
+    /* transform: translateX(-100%); */
+    /* transform: translateX(props => props.className === "left" && "10px"); */
+    background-image: ${props=> props.backgroundImg};
 `
 const Slide = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    height: auto;
+    width: 100vw ;
     background-color: ${props=> props.bg};
+    padding-bottom: 20px;
+    /* transition: all 1.5s ease; */
+    transform: translateX(${props => props.slideIndex * -100}vw);
 `
 const ImgContainer = styled.div`
     flex: 1;
-    height: 100%;
-    padding-top: 70px;
-    margin-left: 50px;
+    height: 50%;
+    padding-bottom: 10px; 
 `
 const Image = styled.img`
-    height: 80%;
-`
-const InfoContainer = styled.div`
-    flex: 1;
-    padding: 50px;
+    height: auto;
+    width: 25vw;
 `
 const Title = styled.h1`
     font-size: 60px;
-`
-const Description = styled.p`
-    margin: 40px 0px;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 2px;
 `
 const Button = styled.button`
     padding: 10px;
@@ -73,41 +71,65 @@ const Button = styled.button`
     cursor: pointer;
 `
 
+// // trying to make automatic and ridding the loopback: slider component
 
 const Slider = () => {
-    const [slideIndex, setSlideIndex] = useState(0);
-    const handleClick = (direction) => {
-        if (direction === "left"){
-            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
-        } else {
-            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
-        }
-    };
 
-    return (
-    <Container>
-        <Arrow direction = "left" onClick={() => handleClick("left")}>
-            <ArrowLeftOutlinedIcon/>
+    const [sliderInfo] = useState(allProducts);
+    const [slideIndex, setSlideIndex] = useState(0);
+
+    useEffect(() => {
+        const lastIndex = sliderInfo.length -1;
+        if (slideIndex < 0) {
+            setSlideIndex(lastIndex);
+        }
+        if (slideIndex > lastIndex) {
+            setSlideIndex(0);
+        }
+    }, [slideIndex, sliderInfo])
+
+    useEffect(() => {
+        let slider = setInterval(() =>{
+            setSlideIndex(slideIndex + 1)
+        }, 5000);
+        return () => {
+            clearInterval(slider)
+        }
+    }, [slideIndex])
+    return(
+        <Container>
+        <Arrow direction = "left" onClick={() => setSlideIndex(slideIndex - 1)}>
+        <ArrowLeftOutlinedIcon/>
         </Arrow>
-        <Wrapper slideIndex = {slideIndex}>
-           {sliderItems.map((item) => ( 
-            <Slide bg={item.bg} key ={item.id}>
-            <ImgContainer>
-            <Image src = {item.img} />
-            </ImgContainer>
-            <InfoContainer>
-                <Title>{item.title} </Title>
-                <Description>{item.desc} </Description>
-                <Button>Shop Now</Button>
-            </InfoContainer>
+         <Wrapper>
+         {allProducts.map((item, indexPerSlide) => { 
+            let position = "nextSlide";
+         if (indexPerSlide === slideIndex) {
+           position = "activeSlide";
+         }
+         if (
+            indexPerSlide === slideIndex - 1 ||
+            (slideIndex === 0 && indexPerSlide === allProducts.length - 1)
+          ) {
+            position = "lastSlide";
+          }
+          return(
+           <Slide slideIndex = {slideIndex} className={position} bg={item.bg} key ={item.id}>
+             <Title>{item.title} </Title>
+             <ImgContainer>
+             <Image src = {item.img} />
+             </ImgContainer>
+             <Button>Shop Now</Button>
            </Slide>
-            ))}
-        </Wrapper>
-        <Arrow direction = "right" onClick={() => handleClick("right")}>
-            <ArrowRightOutlinedIcon/> 
+        );
+    })}
+     </Wrapper>
+        <Arrow direction = "right" onClick={() => setSlideIndex(slideIndex + 1)}>
+        <ArrowRightOutlinedIcon/> 
         </Arrow>
-    </Container>
-  )
+       </Container>  
+    )
 };
+
 
 export default Slider;

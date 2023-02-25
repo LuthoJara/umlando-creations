@@ -8,8 +8,9 @@ import ContactUs from "./pages/ContactUs";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
+// import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
-import ProductList from "./pages/ProductList";
+import Wishlist from "./pages/Wishlist";
 
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
        <Route path='/ContactUs' element={<ContactUs/>} />
        <Route path='/Login' element={<Login/>} />
        <Route path='/Product' element={<Product/>} />
-       <Route path='/ProductList' element={<ProductList/>} />
+       {/* <Route path='/ProductList' element={<ProductList/>} /> */}
        <Route path='/Register' element={<Register/>} />
+       <Route path='/Wishlist' element={<Wishlist/>} />
       </Routes>
     </div>
   );
