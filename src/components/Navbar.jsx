@@ -17,7 +17,7 @@ import UCLogo from '../images/UC-logo.png'
 import { FavoriteBorderOutlined } from '@mui/icons-material';
 
 const Container = styled.div`
-  height: 15vh;
+  height: auto;
   background-color: #000000;
   padding-bottom: 5px;
   /* position: absolute; */
