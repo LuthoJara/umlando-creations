@@ -23,13 +23,14 @@ const ProductWrapper = styled.div`
 ` 
 const Title = styled.h1`
   font-size: 60px;
+  text-decoration: underline;
 `
 const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1 1 0; /* reset flex property to 0 to allow for manual width assignment */
+  flex: 1 2 0; /* reset flex property to 0 to allow for manual width assignment */
   
   & > * {
     flex-basis: calc(33.333333% - 20px); /* set width of each item to one-third of the Wrapper's width minus margin */

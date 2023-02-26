@@ -63,6 +63,8 @@ const Image = styled.img`
 `
 const Title = styled.h1`
     font-size: 60px;
+    padding: 20px;
+    text-decoration: underline;
 `
 // const Button = styled.button`
 //     padding: 10px;

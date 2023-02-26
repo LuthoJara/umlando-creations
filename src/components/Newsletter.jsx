@@ -2,8 +2,10 @@ import { Send } from "@mui/icons-material"
 import styled from "styled-components"
 
 const Container = styled.div`
-  height: 30vh;
-  width: auto;
+  height: auto;
+  padding-bottom: 70px;
+  padding-top: 40px;
+  width: 100%;
   background-color: #fcf5f5;
   display: flex;
   align-items: center;

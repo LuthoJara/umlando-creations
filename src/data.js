@@ -38,7 +38,7 @@ export const allProducts = [
     {
         id: 4,
         img: keychain1,
-        title: "Keychain",
+        title: "Bag Tag",
         quantity: [1, 2],
         price: [20, 30],
         // font: [font1, font2],

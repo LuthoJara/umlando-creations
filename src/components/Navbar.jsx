@@ -20,27 +20,16 @@ const Container = styled.div`
   height: auto;
   background-color: #000000;
   padding-bottom: 5px;
-  /* position: absolute; */
   `
-
 const Wrapper = styled.div`
-  /* position: fixed; */
-  /* z-index: 2; */
   padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* Media query for screens smaller than 768px */
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    height: auto;
-  }
 `
-
 const MenuItem = styled(Link)`
   height: 8rem;
-  font-size: 1.3em;
+  font-size: 1.5em;
   width: auto;
   display: flex;
   align-items: center;
@@ -49,34 +38,19 @@ const MenuItem = styled(Link)`
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
-
-  /* Media query for screens smaller than 768px */
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    padding: 10px 0;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-  }
+  padding-right: 15px;
 `
-
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
 `
-
 const Logo = styled.img`
   height: auto;
   width: 13vw;
   cursor: pointer;
-   
-  /* Media query for screens smaller than 768px */
-   @media screen and (max-width: 768px) {
-    width: 7vw;
-  }
 `
-
 const Right = styled.div`
   flex: 3;
   display: flex;
@@ -84,25 +58,21 @@ const Right = styled.div`
   text-align: center;
   justify-content: space-around;
 `
-
 const SearchContainer = styled.div`
-  margin-right: 5px;
-  /* padding-right: 25px; */
+  height: auto;
+  width: 10vw;
+  margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 `
-
 const Input = styled.input`
   height: 100%;
   border: none;
   width: 150px;
-
-  /* Media query for screens smaller than 768px */
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-`
+  /* margin-right: 15px;
+  margin-left: 15px; */
+` 
 
 const Navbar = () => {
   return (
@@ -130,18 +100,18 @@ const Navbar = () => {
             LOGIN
           </MenuItem>
           <MenuItem to='/Cart'>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={4} color="primary"  style={{marginRight: "5px"}} >
               <ShoppingCartOutlinedIcon />
             </Badge>
           </MenuItem>
           <MenuItem to='/Wishlist'>
-            <FavoriteBorderOutlined />
+            <FavoriteBorderOutlined style={{paddingRight: "50px"}} />
             {/* <FavoriteBorder /> */}
           </MenuItem>
           <MenuItem>
             <SearchContainer>
               <SearchIcon />
-              <Input />
+              <Input style={{marginRight: "25px"}} />
             </SearchContainer>
           </MenuItem>
         </Right>

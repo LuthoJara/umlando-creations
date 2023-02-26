@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-import Navbar from "../components/Navbar"
 import Announcements from "../components/Announcements"
+import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 import ribbon1 from "../images/ribbon1.jpg"
@@ -138,8 +138,8 @@ const Hr = styled.hr`
 const Cart = () => {
   return (
     <Container>
-      <Navbar/>  
       <Announcements/>
+      <Navbar/>  
       <Wrapper>
         <Title>Your Ribbon</Title>
         <Top>
