@@ -16,8 +16,10 @@ const Wrapper = styled.div`
   padding: 20px;
 `
 const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 700;
+  font-size: 2.5rem;
   text-align: center;
+  text-decoration: underline;
 `
 const Top = styled.div`
   display: flex;
@@ -111,14 +113,14 @@ const Wishlist = () => {
       <Navbar/>  
       <Wrapper>
         <Title>Your Wishlist</Title>
-        <Top>
+        {/* <Top>
          <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist</TopText>
           </TopTexts>
          <TopButton type="filled">CHECKOUT NOW</TopButton>
-        </Top>
+        </Top> */}
         <Bottom>
             <Info>
                 <Product>

@@ -20,7 +20,7 @@ const Form = styled.form`
   align-items: center;
   width: 400px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
   padding: 20px;
 `;

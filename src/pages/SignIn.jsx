@@ -33,12 +33,12 @@
 //   flex: 1;
 //   min-width: 40%;
 //   margin: 20px 10px 0px 0px;
-//   padding: 10px; 
+//   padding: 10px;
 // `
 // const Agreement = styled.span`
 //   font-size: 12px;
 //   margin: 20px 0px;
-// ` 
+// `
 // const Button = styled.button`
 //   width: 40%;
 //   border: none;
@@ -48,7 +48,7 @@
 //   cursor: pointer;
 // `
 
-// const Register = () => {
+// const SignIn = () => {
 //   return (
 //     <Container>
 //         <Wrapper>
@@ -57,13 +57,13 @@
 //             <Input placeholder="name"/>
 //             <Input placeholder="surname"/>
 //             <Input placeholder="email"/>
-//             <Input placeholder="username"/>   
-//             <Input placeholder="password"/>     
-//             <Input placeholder="confirm password"/>  
+//             <Input placeholder="username"/>
+//             <Input placeholder="password"/>
+//             <Input placeholder="confirm password"/>
 //             <Agreement>
-//             By creating an account, I consent to the processing of my personal data in accordance with the 
-//             <b> PRIVACY POLICY</b>  
-//             </Agreement>                          
+//             By creating an account, I consent to the processing of my personal data in accordance with the
+//             <b> PRIVACY POLICY</b>
+//             </Agreement>
 //           <Button>SUBMIT</Button>
 //           </Form>
 //         </Wrapper>
@@ -71,18 +71,16 @@
 //   )
 // }
 
-// export default Register
+// export default SignIn
 
-import React from 'react';
-import styled from 'styled-components';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import { useState } from "react";
 
-const Container = styled.div`
-  
-`
+const Container = styled.div``;
 const SignUpFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -98,14 +96,14 @@ const Form = styled.form`
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-`
+`;
 const Input = styled.input`
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
-`
+`;
 const Button = styled.button`
   padding: 10px 20px;
   margin-top: 20px;
@@ -114,9 +112,9 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-`
+`;
 
-const Register = () => {
+const SignIn = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -128,34 +126,34 @@ const Register = () => {
 
   return (
     <Container>
-    <Navbar/>
-    <SignUpFormWrapper>
-      <h2>Sign Up</h2>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
-        />
-        <Input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
+      <Navbar />
+      <SignUpFormWrapper>
+        <h2>Sign In</h2>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
           />
-        <Input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-        <Button type="submit">Sign Up</Button>
-      </Form>
-    </SignUpFormWrapper>
-    <Footer/>
+          <Input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <Input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          <Button type="submit">SignIn</Button>
+        </Form>
+      </SignUpFormWrapper>
+      <Footer />
     </Container>
   );
 };
 
-export default Register;
+export default SignIn;

@@ -25,7 +25,7 @@ const Top = styled.div`
     justify-content: space-between;
     padding: 20px;
 `
-const TopButton = styled.button`
+const TopButton = styled.button` 
     padding: 10px;
     font-weight: 600;
     border: ${props => props.type === "filled" && "none"};
