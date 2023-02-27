@@ -10,10 +10,6 @@ import Badge from "@mui/material/Badge";
 ///Routes for the react app
 import { Link, useLocation} from "react-router-dom";
 
-//Importing components
-import Announcements from '../components/Announcements'
-
-
 //Importing the logo
 import UCLogo from "../images/UC-logo.png";
 import { FavoriteBorderOutlined } from "@mui/icons-material";
@@ -27,13 +23,12 @@ const Container = styled.div`
   position: relative;
 `
 const Wrapper = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
 
 //Making the menu sticky
-  /* height: 8rem; */
   height: ${props => props.sticky ? "5rem" : "8rem"};
   padding: ${props => props.sticky ? "0px 10px" : "20px 40px"};
   position: ${props => props.sticky ? "fixed" : "relative"};
@@ -85,8 +80,6 @@ const Input = styled.input`
   height: 100%;
   border: none;
   width: 150px;
-  /* margin-right: 15px;
-  margin-left: 15px; */
 `;
 
 const Navbar = () => {
@@ -98,7 +91,7 @@ useEffect(() => {
   return () => {
     window.removeEventListener("scroll", handleScroll);
   };
-}, []);
+});
 
 const excludedPaths = ["/Login", "/CreateAccount", "/ContactUs"];
 
