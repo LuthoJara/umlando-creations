@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-import Navbar from "../components/Navbar"
 import Announcements from "../components/Announcements"
+import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 import ribbon1 from "../images/ribbon1.jpg"
@@ -25,7 +25,7 @@ const Top = styled.div`
     justify-content: space-between;
     padding: 20px;
 `
-const TopButton = styled.button`
+const TopButton = styled.button` 
     padding: 10px;
     font-weight: 600;
     border: ${props => props.type === "filled" && "none"};
@@ -138,8 +138,8 @@ const Hr = styled.hr`
 const Cart = () => {
   return (
     <Container>
-      <Navbar/>  
       <Announcements/>
+      <Navbar/>  
       <Wrapper>
         <Title>Your Ribbon</Title>
         <Top>
