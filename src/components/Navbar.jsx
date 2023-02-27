@@ -62,7 +62,7 @@ const Logo = styled.img`
   cursor: pointer;
 `;
 const Right = styled.div`
-  flex: 3;
+  flex: 5;
   display: flex;
   align-items: center;
   text-align: center;
@@ -88,6 +88,9 @@ const Navbar = () => {
   const excludedPaths = useMemo(() => ["/Login", "/CreateAccount", "/ContactUs"], []);
 
 useEffect(() => {
+  // Reset scroll position on page load
+  window.scrollTo(0, 0);
+
   const handleScroll = () => {
     if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
       setSticky(true);
