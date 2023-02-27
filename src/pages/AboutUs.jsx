@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+//Importing components
+import Announcements from '../components/Announcements'
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
   background-color: #d6c9c9;
@@ -38,6 +40,7 @@ const ListItem = styled.li`
 const AboutUs = () => {
   return (
     <Container>
+     <Announcements/>      
       <Navbar/>
       <Wrapper>
       <Heading><hr/>About Us<hr/></Heading>

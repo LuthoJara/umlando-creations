@@ -1,4 +1,5 @@
-import React from "react";
+//Importing for the sticky menu
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 //Iporting icons from MUI
@@ -7,10 +8,11 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
 
 ///Routes for the react app
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 
-//Importing responsive design elements
-// import {mobile} from '../responsive'
+//Importing components
+import Announcements from '../components/Announcements'
+
 
 //Importing the logo
 import UCLogo from "../images/UC-logo.png";
@@ -20,15 +22,28 @@ const Container = styled.div`
   height: auto;
   background-color: #000000;
   padding-bottom: 5px;
-`;
+
+  //Making the menu sticky
+  position: relative;
+`
 const Wrapper = styled.div`
-  padding: 5px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #000000;
+
+//Making the menu sticky
+  /* height: 8rem; */
+  height: ${props => props.sticky ? "5rem" : "8rem"};
+  padding: ${props => props.sticky ? "0px 10px" : "20px 40px"};
+  position: ${props => props.sticky ? "fixed" : "relative"};
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+`
 const MenuItem = styled(Link)`
-  height: 8rem;
   font-size: 1.4rem;
   width: auto;
   display: flex;
@@ -39,7 +54,7 @@ const MenuItem = styled(Link)`
   color: #ffffff;
   cursor: pointer;
   padding-right: 15px;
-`;
+`
 const Left = styled.div`
   flex: 1;
   display: flex;
@@ -75,9 +90,29 @@ const Input = styled.input`
 `;
 
 const Navbar = () => {
+  const [isSticky, setSticky] = useState(false);
+  const { pathname } = useLocation();
+
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
+const excludedPaths = ["/Login", "/CreateAccount", "/ContactUs"];
+
+const handleScroll = () => {
+  if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
+    setSticky(true);
+  } else {
+    setSticky(false);
+  }
+};
+
   return (
     <Container>
-      <Wrapper>
+      <Wrapper sticky={isSticky}>
         <Left>
           <MenuItem to="/">
             <Logo src={UCLogo} />
