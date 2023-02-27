@@ -21,28 +21,6 @@ const Title = styled.h1`
   text-align: center;
   text-decoration: underline;
 `
-const Top = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-`
-const TopButton = styled.button`
-  padding: 10px;
-  font-weight: 600;
-  border: ${props => props.type === "filled" && "none"};
-  color: ${props => props.type === "filled" && "white"};
-  background-color: ${props => 
-  props.type === "filled" ? "#000" : "transparent"};
-  cursor: pointer; 
-` 
-const TopTexts = styled.div`
-`
-const TopText = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0px 10px;
-`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;

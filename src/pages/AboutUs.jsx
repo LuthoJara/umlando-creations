@@ -38,6 +38,7 @@ const ListItem = styled.li`
   margin-bottom: 10px;
 `
 const AboutUs = () => {
+  
   return (
     <Container>
      <Announcements/>      

@@ -1,5 +1,5 @@
 //Importing for the sticky menu
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
 
 //Iporting icons from MUI
@@ -9,10 +9,6 @@ import Badge from "@mui/material/Badge";
 
 ///Routes for the react app
 import { Link, useLocation} from "react-router-dom";
-
-//Importing components
-import Announcements from '../components/Announcements'
-
 
 //Importing the logo
 import UCLogo from "../images/UC-logo.png";
@@ -27,13 +23,12 @@ const Container = styled.div`
   position: relative;
 `
 const Wrapper = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
 
 //Making the menu sticky
-  /* height: 8rem; */
   height: ${props => props.sticky ? "5rem" : "8rem"};
   padding: ${props => props.sticky ? "0px 10px" : "20px 40px"};
   position: ${props => props.sticky ? "fixed" : "relative"};
@@ -85,31 +80,29 @@ const Input = styled.input`
   height: 100%;
   border: none;
   width: 150px;
-  /* margin-right: 15px;
-  margin-left: 15px; */
 `;
 
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const { pathname } = useLocation();
+  const excludedPaths = useMemo(() => ["/Login", "/CreateAccount", "/ContactUs"], []);
 
 useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+
   window.addEventListener("scroll", handleScroll);
+
   return () => {
     window.removeEventListener("scroll", handleScroll);
   };
-}, []);
-
-const excludedPaths = ["/Login", "/CreateAccount", "/ContactUs"];
-
-const handleScroll = () => {
-  if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
-    setSticky(true);
-  } else {
-    setSticky(false);
-  }
-};
-
+}, [excludedPaths, pathname, setSticky]);
+  
   return (
     <Container>
       <Wrapper sticky={isSticky}>
