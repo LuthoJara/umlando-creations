@@ -1,5 +1,5 @@
 //Importing for the sticky menu
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
 
 //Iporting icons from MUI
@@ -85,10 +85,9 @@ const Input = styled.input`
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const { pathname } = useLocation();
+  const excludedPaths = useMemo(() => ["/Login", "/CreateAccount", "/ContactUs"], []);
 
-  
-  const excludedPaths = ["/Login", "/CreateAccount", "/ContactUs"];
-
+useEffect(() => {
   const handleScroll = () => {
     if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
       setSticky(true);
@@ -96,14 +95,13 @@ const Navbar = () => {
       setSticky(false);
     }
   };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
 
+  window.addEventListener("scroll", handleScroll);
 
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [excludedPaths, pathname, setSticky]);
   
   return (
     <Container>
