@@ -86,23 +86,25 @@ const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const { pathname } = useLocation();
 
-useEffect(() => {
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
+  
+  const excludedPaths = ["/Login", "/CreateAccount", "/ContactUs"];
+
+  const handleScroll = () => {
+    if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
   };
-});
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
-const excludedPaths = ["/Login", "/CreateAccount", "/ContactUs"];
 
-const handleScroll = () => {
-  if (window.scrollY > 100 && !excludedPaths.includes(pathname)) {
-    setSticky(true);
-  } else {
-    setSticky(false);
-  }
-};
-
+  
   return (
     <Container>
       <Wrapper sticky={isSticky}>
