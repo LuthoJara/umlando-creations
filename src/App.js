@@ -8,8 +8,8 @@ import ContactUs from "./pages/ContactUs";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
-// import ProductList from "./pages/ProductList";
-import SignIn from "./pages/SignIn";
+import ProductList from "./pages/ProductList";
+import CreateAccount from "./pages/CreateAccount";
 import Wishlist from "./pages/Wishlist";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Product" element={<Product />} />
-        {/* <Route path='/ProductList' element={<ProductList/>} /> */}
-        <Route path="/SignIn" element={<SignIn />} />
+        <Route path='/ProductList' element={<ProductList/>} />
+        <Route path="/CreateAccount" element={<CreateAccount />} />
         <Route path="/Wishlist" element={<Wishlist />} />
       </Routes>
     </div>

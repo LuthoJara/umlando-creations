@@ -6,7 +6,6 @@ import Newsletter from '../components/Newsletter';
 
 const Container = styled.div`
   background-color: #d6c9c9;
-  /* padding: 10px; */
 `
 const Wrapper = styled.div`
   background-color: #fff;
@@ -39,10 +38,9 @@ const ListItem = styled.li`
 const AboutUs = () => {
   return (
     <Container>
-      <Navbar/ >
-
+      <Navbar/>
       <Wrapper>
-      <Heading>About Us</Heading>
+      <Heading><hr/>About Us<hr/></Heading>
       <Subheading>Our Mission</Subheading>
       <Paragraph>
       UMlando Creations is a company founded by a single woman who wanted to escape the mundanity of the nine-to-five workday and provide value to the world through labels. She recognized the importance of security and ownership, and how labels played an integral role in that. UMlando Creations seeks to empower individuals by helping them label and organize their belongings. With UMlando Creations, individuals can rest easy knowing that their possessions are secure and accounted for. But the company's mission doesn't stop there. The founder of UMlando Creations has always been passionate about women's empowerment, and she wanted to incorporate that into the company's mission as well.

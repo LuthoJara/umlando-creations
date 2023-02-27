@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Navbar from "../components/Navbar"
 import Announcements from "../components/Announcements"
-import Products from "../components/Products"
+import AllProducts from "../components/AllProducts"
 import Newsletter from "../components/Newsletter"
 import Footer from "../components/Footer"
 
@@ -63,7 +63,7 @@ const ProductList = () => {
          </Select>
         </Filter>
      </FilterContainer>
-     <Products/>
+     <AllProducts/>
      <Newsletter/>
      <Footer/>
     </Container>

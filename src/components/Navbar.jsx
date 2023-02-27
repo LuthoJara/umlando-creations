@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 `;
 const MenuItem = styled(Link)`
   height: 8rem;
-  font-size: 1.5em;
+  font-size: 1.4rem;
   width: auto;
   display: flex;
   align-items: center;
@@ -84,12 +84,11 @@ const Navbar = () => {
           </MenuItem>
         </Left>
         <Right>
-          {/* <MenuItem to='/Product'>
-            OUR PRODUCTS
-          </MenuItem> */}
+          <MenuItem to="/ProductList">PRODUCT LIST</MenuItem>
+          <MenuItem to="/Product">PRODUCT INFO</MenuItem>
           <MenuItem to="/AboutUs">ABOUT US</MenuItem>
           <MenuItem to="/ContactUs">CONTACT US</MenuItem>
-          <MenuItem to="/SignIn">SIGN IN</MenuItem>
+          <MenuItem to="/CreateAccount">CREATE AN ACCOUNT</MenuItem>
           <MenuItem to="/Login">LOGIN</MenuItem>
           <MenuItem to="/Cart">
             <Badge
@@ -101,8 +100,7 @@ const Navbar = () => {
             </Badge>
           </MenuItem>
           <MenuItem to="/Wishlist">
-            <FavoriteBorderOutlined style={{ paddingRight: "50px" }} />
-            {/* <FavoriteBorder /> */}
+            <FavoriteBorderOutlined style={{ paddingRight: "30px" }} />
           </MenuItem>
           <MenuItem>
             <SearchContainer>
