@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+//Importing components
+import Announcements from '../components/Announcements'
 import styled from "styled-components";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -58,6 +61,7 @@ const Login = () => {
 
   return (
     <Container>
+     <Announcements/>
     <Navbar/>
     <LoginPageWrapper>
     <Heading><hr/>Login<hr/></Heading>

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+//Importing components
+import Announcements from '../components/Announcements'
 import styled from "styled-components";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -74,6 +77,7 @@ const ContactUs = () => {
 
   return (
     <Container>
+    <Announcements/>      
     <Navbar/>
     <ContactUsPageWrapper>
       <Heading><hr/>Contact Us<hr/></Heading>

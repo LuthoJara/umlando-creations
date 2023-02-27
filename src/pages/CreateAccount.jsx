@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
+//Importing components
+import Announcements from '../components/Announcements'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -9,7 +12,6 @@ const Container = styled.div`
   background-color: #d6c9c9;
 `
 const Heading = styled.h1`
-
 `
 const CreateAccountFormWrapper = styled.div`
   background-color: #fff;
@@ -62,6 +64,7 @@ const CreateAccount = () => {
 
   return (
     <Container>
+      <Announcements/>      
       <Navbar />
       <CreateAccountFormWrapper>
       <Heading><hr/>Create an account<hr/></Heading>
