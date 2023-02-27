@@ -18,7 +18,7 @@ const BackToTop = () => {
     <Container>
       <Wrapper> 
        <Button>
-        <a href='www.google.com' target={'_blank'}>Back-to-top</a>
+        Back-to-top
        </Button>
       </Wrapper>
     </Container>
