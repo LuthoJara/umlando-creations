@@ -14,6 +14,9 @@ import { Link, useLocation} from "react-router-dom";
 import UCLogo from "../images/UC-logo.png";
 import { FavoriteBorderOutlined } from "@mui/icons-material";
 
+//Importing the Hamburger menu
+import HamburgerMenu from "./HamburgerMenu";
+
 const Container = styled.div`
   height: auto;
   background-color: #000000;
@@ -115,8 +118,8 @@ useEffect(() => {
           </MenuItem>
         </Left>
         <Right>
-          <MenuItem to="/ProductList">PRODUCT LIST</MenuItem>
-          <MenuItem to="/Product">PRODUCT INFO</MenuItem>
+          {/* <MenuItem to="/ProductList">PRODUCT LIST</MenuItem>
+          <MenuItem to="/Product">PRODUCT INFO</MenuItem> */}
           <MenuItem to="/AboutUs">ABOUT US</MenuItem>
           <MenuItem to="/ContactUs">CONTACT US</MenuItem>
           <MenuItem to="/CreateAccount">CREATE AN ACCOUNT</MenuItem>
@@ -139,6 +142,7 @@ useEffect(() => {
               <Input style={{ marginRight: "25px" }} />
             </SearchContainer>
           </MenuItem>
+          <HamburgerMenu/>
         </Right>
       </Wrapper>
     </Container>

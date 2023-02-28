@@ -26,6 +26,7 @@ function App() {
         <Route path="/CreateAccount" element={<CreateAccount />} />
         <Route path="/Wishlist" element={<Wishlist />} />
       </Routes>
+    
     </div>
   );
 }
