@@ -24,7 +24,6 @@ const Logo = styled.h1`
 const Description = styled.p`
     margin: 20px 0px;
     color: #fff;
-
 `
 const SocialContainer = styled.div`
     display: flex;
@@ -92,10 +91,6 @@ const Footer = () => {
             <Logo>CREATIONS</Logo>
             <Description>The best place to get all your labels. </Description>
             <SocialContainer>
-             <SocialIcons color="#204897">
-              <a href="https://www.facebook.com/" target={"_blank"}  rel="noopener noreferrer">
-               <Facebook />
-              </a>
              </SocialIcons>
              <SocialIcons color="#d51f8c">
              <a href="https://www.instagram.com/" target={"_blank"}  rel="noopener noreferrer">

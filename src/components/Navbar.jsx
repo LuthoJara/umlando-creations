@@ -14,6 +14,9 @@ import { Link, useLocation} from "react-router-dom";
 import UCLogo from "../images/UC-logo.png";
 import { FavoriteBorderOutlined } from "@mui/icons-material";
 
+//Importing the Hamburger menu
+// import HamburgerMenu from "./HamburgerMenu";
+
 const Container = styled.div`
   height: auto;
   background-color: #000000;
@@ -55,19 +58,19 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-`;
+`
 const Logo = styled.img`
   height: auto;
-  width: 13vw;
+  width: 10vw;
   cursor: pointer;
-`;
+`
 const Right = styled.div`
   flex: 5;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-around;
-`;
+`
 const SearchContainer = styled.div`
   height: auto;
   width: 10vw;
@@ -75,13 +78,12 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 const Input = styled.input`
   height: 100%;
   border: none;
   width: 150px;
-`;
-
+`
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const { pathname } = useLocation();
@@ -115,15 +117,15 @@ useEffect(() => {
           </MenuItem>
         </Left>
         <Right>
-          <MenuItem to="/ProductList">PRODUCT LIST</MenuItem>
-          <MenuItem to="/Product">PRODUCT INFO</MenuItem>
+          {/* <MenuItem to="/ProductList">PRODUCT LIST</MenuItem>
+          <MenuItem to="/Product">PRODUCT INFO</MenuItem> */}
           <MenuItem to="/AboutUs">ABOUT US</MenuItem>
           <MenuItem to="/ContactUs">CONTACT US</MenuItem>
           <MenuItem to="/CreateAccount">CREATE AN ACCOUNT</MenuItem>
           <MenuItem to="/Login">LOGIN</MenuItem>
           <MenuItem to="/Cart">
             <Badge
-              badgeContent={4}
+              badgeContent={0}
               color="primary"
               style={{ marginRight: "5px" }}
             >
@@ -138,6 +140,9 @@ useEffect(() => {
               <SearchIcon />
               <Input style={{ marginRight: "25px" }} />
             </SearchContainer>
+          </MenuItem>
+          <MenuItem>
+           {/* <HamburgerMenu/> */}
           </MenuItem>
         </Right>
       </Wrapper>

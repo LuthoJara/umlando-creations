@@ -66,12 +66,6 @@ const Title = styled.h1`
     padding: 20px;
     text-decoration: underline;
 `
-// const Button = styled.button`
-//     padding: 10px;
-//     font-size: 20px;
-//     background-color: transparent;
-//     cursor: pointer;
-// `
 
 // // trying to make automatic and ridding the loopback: slider component
 
@@ -121,7 +115,6 @@ const Slider = () => {
              <ImgContainer>
              <Image src = {item.img} />
              </ImgContainer>
-             {/* <Button>Shop Now</Button> */}
            </Slide>
         );
     })}
