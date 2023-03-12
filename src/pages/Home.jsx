@@ -13,8 +13,8 @@ const Home = () => {
     <Announcements/>
     <Navbar/>
     <Slider/>
-    <BackToTop/>
     <AllProducts/> 
+    <BackToTop/>
     <Newsletter/>
     <Footer/>
     </>

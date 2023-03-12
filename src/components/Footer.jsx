@@ -28,7 +28,7 @@ const Description = styled.p`
 const SocialContainer = styled.div`
     display: flex;
 `
-const SocialIcons = styled.a`
+const SocialIcons = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -38,6 +38,16 @@ const SocialIcons = styled.a`
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    text-decoration: none;
+
+  &:visited {
+    color: #fff;
+    background-color: ${props => props.color};
+  }
+  &:active {
+    color: #fff;
+    background-color: ${props => props.color};
+  }
 `
 const Centre = styled.div`
     flex: 1;    
@@ -63,18 +73,16 @@ const ListItem = styled(Link)`
 const Right = styled.div`
     flex: 1;    
     padding: 20px;
-`
+` 
 const ContactItem = styled.div`
     margin-bottom: 20px;
     align-items: center;
     display: flex;
     color: #fff;
-
 `
 const Payment = styled.img`
     width: 50%;
 `
-
 const Footer = () => {
   return (
     <Container>
@@ -83,17 +91,21 @@ const Footer = () => {
             <Logo>CREATIONS</Logo>
             <Description>The best place to get all your labels. </Description>
             <SocialContainer>
-             <SocialIcons color="#224b9c" >
-                <Facebook/>
              </SocialIcons>
-             <SocialIcons color="#d51f8c" href="instagram.com" target={"_blank"}>
+             <SocialIcons color="#d51f8c">
+             <a href="https://www.instagram.com/" target={"_blank"}  rel="noopener noreferrer">
                 <Instagram/>
+                </a>                
              </SocialIcons>
-             <SocialIcons color="#389ae1" href="twitter.com" target={"_blank"}>
+             <SocialIcons color="#389ae1">
+             <a href="https://www.twitter.com/" target={"_blank"}  rel="noopener noreferrer">
                 <Twitter/>
+                </a>
              </SocialIcons>
-             <SocialIcons color="#ea2113" href="www.pinterest.com" target={"_blank"}>
+             <SocialIcons color="#ea2113">
+             <a href="https://www.pinterest.com/" target={"_blank"}  rel="noopener noreferrer">
                 <Pinterest/>
+                </a>
              </SocialIcons>
             </SocialContainer>
         </Left>
