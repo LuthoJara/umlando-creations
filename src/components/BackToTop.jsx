@@ -60,7 +60,8 @@ const BackToTop = () => {
   return (
     <Container>
       <Wrapper>
-      <Button>
+      <Button visible={visible} onClick={handleBackToTopClick}>
+        <ArrowUpwardOutlined/>
        </Button>
       </Wrapper>
     </Container>

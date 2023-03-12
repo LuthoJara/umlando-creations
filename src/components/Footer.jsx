@@ -89,8 +89,12 @@ const Footer = () => {
         <Left>
             <Logo>UMLANDO</Logo>
             <Logo>CREATIONS</Logo>
-            <Description>The best place to get all your labels. </Description>
+            <Description>The best place to get all your labels.</Description>
             <SocialContainer>
+            <SocialIcons color="#171787">
+             <a href="https://www.instagram.com/" target={"_blank"}  rel="noopener noreferrer">
+                <Facebook/>
+                </a>                
              </SocialIcons>
              <SocialIcons color="#d51f8c">
              <a href="https://www.instagram.com/" target={"_blank"}  rel="noopener noreferrer">
