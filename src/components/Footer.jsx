@@ -28,26 +28,16 @@ const Description = styled.p`
 const SocialContainer = styled.div`
     display: flex;
 `
-const SocialIcons = styled.div`
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: ${props => props.color};
+const SocialIcons = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     margin-right: 20px;
-    text-decoration: none;
-
-  &:visited {
     color: #fff;
     background-color: ${props => props.color};
-  }
-  &:active {
-    color: #fff;
-    background-color: ${props => props.color};
-  }
 `
 const Centre = styled.div`
     flex: 1;    
@@ -91,25 +81,17 @@ const Footer = () => {
             <Logo>CREATIONS</Logo>
             <Description>The best place to get all your labels.</Description>
             <SocialContainer>
-            <SocialIcons color="#171787">
-             <a href="https://www.instagram.com/" target={"_blank"}  rel="noopener noreferrer">
+            <SocialIcons color="#171787" to="https://www.facebook.com/" target="_blank">
                 <Facebook/>
-                </a>                
              </SocialIcons>
-             <SocialIcons color="#d51f8c">
-             <a href="https://www.instagram.com/" target={"_blank"}  rel="noopener noreferrer">
+             <SocialIcons color="#d51f8c" to="https://www.instagram.com/" target="_blank">
                 <Instagram/>
-                </a>                
              </SocialIcons>
-             <SocialIcons color="#389ae1">
-             <a href="https://www.twitter.com/" target={"_blank"}  rel="noopener noreferrer">
+             <SocialIcons color="#389ae1" to="https://www.twitter.com/" target="_blank">
                 <Twitter/>
-                </a>
              </SocialIcons>
-             <SocialIcons color="#ea2113">
-             <a href="https://www.pinterest.com/" target={"_blank"}  rel="noopener noreferrer">
+             <SocialIcons color="#ea2113" to="https://www.pinterest.com/" target="_blank">
                 <Pinterest/>
-                </a>
              </SocialIcons>
             </SocialContainer>
         </Left>
