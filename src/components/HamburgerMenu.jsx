@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Drawer, IconButton } from '@mui/material'
+import { Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const Container = styled.div`
@@ -16,9 +16,17 @@ const HamburgerMenu = () => {
   return (
     <Container>
         <Wrapper>
-            <Drawer open={true} onClose= {() => setOpen(false)} >        </Drawer>
+            <Drawer anchor="right" open={open } onClose={() => setOpen(false)} >       
+            <List>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <ListItemText>Menu:</ListItemText>
+                    </ListItemIcon>
+                </ListItemButton>
+            </List>
+            </Drawer>
             <IconButton>
-                <MenuRoundedIcon/>
+                <MenuRoundedIcon style={{ color: "#fff" }} />
             </IconButton>
         </Wrapper>
     </Container>

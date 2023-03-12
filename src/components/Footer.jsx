@@ -24,7 +24,6 @@ const Logo = styled.h1`
 const Description = styled.p`
     margin: 20px 0px;
     color: #fff;
-
 `
 const SocialContainer = styled.div`
     display: flex;
@@ -47,7 +46,6 @@ const Centre = styled.div`
 const Title = styled.h3`
     margin-bottom: 30px;   
     color: #fff;
- 
 `
 const List = styled.ul`
     margin: 0;
@@ -86,7 +84,7 @@ const Footer = () => {
             <Description>The best place to get all your labels. </Description>
             <SocialContainer>
              <SocialIcons color="#224b9c" >
-                <a href="www.faceboook.com" target='blank'><Facebook/></a>
+                <Facebook/>
              </SocialIcons>
              <SocialIcons color="#d51f8c" href="instagram.com" target={"_blank"}>
                 <Instagram/>

@@ -58,19 +58,19 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-`;
+`
 const Logo = styled.img`
   height: auto;
-  width: 13vw;
+  width: 10vw;
   cursor: pointer;
-`;
+`
 const Right = styled.div`
   flex: 5;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-around;
-`;
+`
 const SearchContainer = styled.div`
   height: auto;
   width: 10vw;
@@ -78,13 +78,12 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 const Input = styled.input`
   height: 100%;
   border: none;
   width: 150px;
-`;
-
+`
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const { pathname } = useLocation();
@@ -126,7 +125,7 @@ useEffect(() => {
           <MenuItem to="/Login">LOGIN</MenuItem>
           <MenuItem to="/Cart">
             <Badge
-              badgeContent={4}
+              badgeContent={0}
               color="primary"
               style={{ marginRight: "5px" }}
             >
@@ -142,7 +141,9 @@ useEffect(() => {
               <Input style={{ marginRight: "25px" }} />
             </SearchContainer>
           </MenuItem>
-          <HamburgerMenu/>
+          <MenuItem>
+           <HamburgerMenu/>
+          </MenuItem>
         </Right>
       </Wrapper>
     </Container>
