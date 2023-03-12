@@ -15,7 +15,7 @@ import UCLogo from "../images/UC-logo.png";
 import { FavoriteBorderOutlined } from "@mui/icons-material";
 
 //Importing the Hamburger menu
-import HamburgerMenu from "./HamburgerMenu";
+// import HamburgerMenu from "./HamburgerMenu";
 
 const Container = styled.div`
   height: auto;
@@ -142,7 +142,7 @@ useEffect(() => {
             </SearchContainer>
           </MenuItem>
           <MenuItem>
-           <HamburgerMenu/>
+           {/* <HamburgerMenu/> */}
           </MenuItem>
         </Right>
       </Wrapper>
